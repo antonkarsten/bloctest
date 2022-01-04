@@ -37,7 +37,7 @@ class SomeWidgetWithBloc extends StatelessWidget {
             child: const Text('Go !'),
           ),
           const Text(
-            'Call Cubit function that emits a new state',
+            'Call Cubit function that emits a new state after the cubit has been closed (this will cause an Exception)',
           ),
           ElevatedButton(
             onPressed: () {
