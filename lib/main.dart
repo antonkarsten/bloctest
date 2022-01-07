@@ -1,9 +1,5 @@
 import 'package:bloctest/some_widget_with_a_provider.dart';
-import 'package:bloctest/some_widget_with_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'bloc/app_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -64,7 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     if (_counter > 0) {
-      return Text('Did you get any errors?');
+      return Scaffold(
+          appBar: AppBar(
+            title: Text(widget.title),
+          ),
+          body: Text('Did you get any errors?'));
     }
     return Scaffold(
         appBar: AppBar(
